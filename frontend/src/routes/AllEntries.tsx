@@ -4,7 +4,7 @@ import { EntryContextType, Entry } from '../@types/context'
 import { useNavigate, Link } from "react-router-dom";
 
 export default function AllEntries(){
-    const {entries, deleteEntry} = useContext(EntryContext) as EntryContextType
+    const {entries, deleteEntry, darkMode } = useContext(EntryContext) as EntryContextType
     let navigate = useNavigate();
     if(entries.length == 0){
         return(
@@ -18,7 +18,9 @@ export default function AllEntries(){
         <section className="grid grid-cols-2 md:grid-cols-4">
             {entries.map((entry: Entry, index: number) => {
                 return(
-                    <div id={entry.id} key={index}className="bg-gray-300 shadow-md shadow-gray-500 m-3 p-4 rounded flex flex-col justify-between">
+                    <div id={entry.id} key={index}className={`${
+                        darkMode ? "bg-gray-800 text-white shadow-gray-700" : "bg-gray-300 text-black shadow-gray-500"
+                      } shadow-md m-3 p-4 rounded flex flex-col justify-between`}>
                         <h1 className="font-bold text-sm md:text-lg">{entry.title}</h1>
                         <p className="text-center text-lg font-light md:mt-2 md:mb-4 mt-1 mb-3">{entry.description}</p>
                         <section className="flex items-center justify-between flex-col md:flex-row pt-2 md:pt-0">

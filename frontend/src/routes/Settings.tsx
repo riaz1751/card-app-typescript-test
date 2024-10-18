@@ -14,7 +14,7 @@ export default function Settings() {
             if (darkMode) toggleDarkMode(); // Switch to Light Mode
           }}
           className={`${
-            darkMode ? "bg-gray-500 hover:bg-gray-600 font-semibold" : "bg-blue-400 hover:bg-blue-600 font-semibold" 
+            darkMode ? "bg-gray-500 hover:bg-gray-600 font-semibold" : "bg-blue-400 hover:bg-blue-600 font-semibold"
           } font-semibold text-white p-3 rounded-md`}
         >
           Light Mode
@@ -24,7 +24,7 @@ export default function Settings() {
             if (!darkMode) toggleDarkMode(); // Switch to Dark Mode
           }}
           className={`${
-            darkMode ? "bg-gray-500 hover:bg-gray-600 font-semibold" : "bg-blue-400 hover:bg-blue-600 font-semibold" 
+            darkMode ? "bg-gray-500 hover:bg-gray-600 font-semibold" : "bg-blue-400 hover:bg-blue-600 font-semibold"
           } font-semibold text-white p-3 rounded-md`}
         >
           Dark Mode
