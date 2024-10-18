@@ -6,7 +6,7 @@ export default function Settings() {
   const { toggleDarkMode, darkMode } = useContext(EntryContext) as EntryContextType;
 
   return (
-    <div className="settings-container dark:bg-gray-800 dark:text-white bg-white text-black min-h-screen">
+    <div className="settings-container dark:bg-gray-700 dark:text-white bg-white text-black min-h-screen">
       <h1 className="text-center font-semibold text-2xl m-5">Settings</h1>
       <div className="flex justify-center gap-4">
         <button
