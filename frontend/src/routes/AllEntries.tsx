@@ -51,9 +51,24 @@ export default function AllEntries() {
                   🖊
                 </button>
               </div>
+              {/* <label className="font-semibold mt-2 mb-1">Created at:</label>
               <time className="text-right text-sm md:text-lg">
                 {new Date(entry.created_at.toString()).toLocaleDateString()}
               </time>
+              <label className="font-semibold mt-2 mb-1">Scheduled at:</label>
+              <time className="text-right text-sm md:text-lg">
+                {new Date(entry.schedule_at.toString()).toLocaleDateString()}
+              </time> */}
+              <div className="flex flex-col w-full">
+            <div className="flex flex-row justify-between">
+              <label className="font-semibold">Created at:</label>
+              <time className="text-sm md:text-lg">{new Date(entry.created_at.toString()).toLocaleDateString()}</time>
+            </div>
+            <div className="flex flex-row justify-between">
+              <label className="font-semibold">Scheduled at:</label>
+              <time className="text-sm md:text-lg">{new Date(entry.schedule_at.toString()).toLocaleDateString()}</time>
+            </div>
+          </div>
             </section>
           </div>
         );

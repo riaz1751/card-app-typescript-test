@@ -37,7 +37,9 @@ export default function NewEntry() {
         value={newEntry.description}
         onChange={handleInputChange}
       />
-      <label className="font-semibold mt-2 mb-1" htmlFor="created_at">Created at</label>
+      <label className="font-semibold mt-2 mb-1" htmlFor="created_at">
+        Created at
+      </label>
       <input
         className={`p-3 rounded-md ${darkMode ? "bg-gray-700 text-white" : "bg-white text-black"}`}
         type="date"
@@ -45,7 +47,9 @@ export default function NewEntry() {
         value={new Date(newEntry.created_at).toISOString().split("T")[0]}
         onChange={handleInputChange}
       />
-      <label className="font-semibold mt-2 mb-1" htmlFor="schedule_at">Schedule at</label>
+      <label className="font-semibold mt-2 mb-1" htmlFor="schedule_at">
+        Schedule at
+      </label>
       <input
         className={`p-3 rounded-md ${darkMode ? "bg-gray-700 text-white" : "bg-white text-black"}`}
         type="date"
