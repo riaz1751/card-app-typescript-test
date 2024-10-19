@@ -20,7 +20,7 @@ export default function AllEntries() {
     );
   }
   return (
-    <section className={`${ darkMode ? "bg-gray-700" : "bg-white" } grid grid-cols-2 md:grid-cols-4`}>
+    <section className={`${darkMode ? "bg-gray-700" : "bg-white"} grid grid-cols-2 md:grid-cols-4`}>
       {entries.map((entry: Entry, index: number) => {
         return (
           <div
